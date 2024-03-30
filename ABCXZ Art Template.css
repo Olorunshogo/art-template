@@ -1,0 +1,143 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* > div {
+    padding: 16px 0;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+body {
+    color: #000000;
+    background-color: #eee;
+    line-height: 1.6;
+}
+
+.header a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 20px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+/* Photo Grid */
+.photoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.leftGrid, .rightGrid {
+    height: auto;
+    min-width: 50%;
+}
+
+.rightGrid {
+    margin-left: 12px;
+}
+
+/* About */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0 20%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+.about img {
+    margin: 10px 0;
+}
+
+.about p {
+    margin: 10px 0;
+}
+
+/* Input fields */
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+input[type=text], input[type=email], input[type=textarea] {
+    /* padding: 50px 0; */
+    border: 2px solid #ccc;
+    width: 100%;
+    margin-bottom: 16px;
+    /* height: 35px; */
+    font-size: 2em;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
+    caret-color: teal;
+    caret-shape: block;
+    outline: 2px solid orange;
+}
+
+#sendBtn {
+    width: 100%;
+    border: none;
+    color: #ddd;
+    background-color: #222;
+    padding: 16px;
+    font-size: 20px;
+}
+
+form {
+    margin: 0px 0;
+}
+
+/* Coloured text */
+.coloured {
+    color: red;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ /* screen and (max-width: 700px){
+    * > div {
+        padding: 0;
+    }
+
+    .header {
+        padding: 35px;
+    }
+    .photoGrid {
+        flex-direction: column;
+        margin: 15px 0;
+    }
+
+    .leftGrid img, .rightGrid img {
+        height: auto;
+        margin: 0;
+    }
+
+    .about h2 {
+        margin: 15px 0;
+    }
+} */
+
+
+
