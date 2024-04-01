@@ -24,6 +24,7 @@ body {
     color: var(--text-color);
     background-color: var(--white-background);
     line-height: 1.6;
+    max-width: 1500px;
 }
 
 .header h1 {
@@ -119,7 +120,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
 
 .footer {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .footer img {
@@ -244,10 +245,14 @@ input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
         width: 100%;
     }
 
-    .about .about-desc p {
+    .about .about-desc .about-p .p {
         font-size: 1rem;
         text-align: left;
         padding: 0 4px;
+    }
+
+    p .coloured {
+        text-align: center;
     }
 
     /* Footer */
