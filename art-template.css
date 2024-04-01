@@ -1,13 +1,17 @@
 /* Global */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-* > div {
-    padding: 4px 0;
+:root {
+    --white-background: #fff;
+    --text-color: #000000;
+}
+
+* > section {
+    padding: 6px 0;
 }
 
 html {
@@ -17,27 +21,33 @@ html {
 }
 
 body {
-    color: #000000;
-    background-color: #eee;
+    color: var(--text-color);
+    background-color: var(--white-background);
     line-height: 1.6;
+}
+
+.header h1 {
+    display: grid;  
+    grid-template-columns: 1fr 0.1fr;   
 }
 
 .header a {
     color: #000000;
     text-decoration: none;
-    font-size: 1.6rem;
-    margin: 0 20px;
-    font-weight: 500;
+    font-size: 1.8rem;
+    padding: 1rem 30px;
+    font-weight: 500;      
 }
 
 p {
-    font-size: 1.4em;
+    font-size: 1.1rem;
 }
 
 /* Photo Grid */
 .photoGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
 }
 
 .leftGrid, .rightGrid {
@@ -45,8 +55,8 @@ p {
     min-width: 50%;
 }
 
-.rightGrid {
-    margin-left: 12px;
+.leftGrid img {
+    min-height: 520px;
 }
 
 /* About */
@@ -59,32 +69,31 @@ p {
 }
 
 .about h2 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: 500;
+    text-align: center;
 }
 
-.about img {
-    margin: 10px 0;
-}
-
-.about p {
-    margin: 10px 0;
+.about .about-desc img {
+    width: 60%;
+    height: auto;
+    margin: 10px 0;  
 }
 
 /* Input fields */
 label {
     display: block;
-    font-weight: 600;
-    font-size: 1.6em;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 input[type=text], input[type=email], input[type=textarea] {
-    /* padding: 50px 0; */
+    padding: 2px 8px;
     border: 2px solid #ccc;
     width: 100%;
     margin-bottom: 16px;
-    /* height: 35px; */
-    font-size: 2em;
+    height: 40px;
+    font-size: 1rem;
 }
 
 input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
@@ -102,13 +111,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
     font-size: 20px;
 }
 
-form {
-    margin: 0px 0;
-}
-
 /* Coloured text */
 .coloured {
     color: red;
+    text-align: center;
 }
 
 .footer {
@@ -116,28 +122,137 @@ form {
     margin-bottom: 40px;
 }
 
- /* screen and (max-width: 700px){
-    * > div {
-        padding: 0;
-    }
+.footer img {
+    width: 60px;
+    height: auto;
+}
 
-    .header {
-        padding: 35px;
+/* Responsiveness for tablet size with a max-width of 760px */
+@media screen and (max-width: 760px) {
+    /* Header */
+    .header a {
+        font-size: 1.4rem;
+        padding: 12px 30px;      
     }
+    
+    /* Photo Grids */
     .photoGrid {
-        flex-direction: column;
-        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
     }
 
-    .leftGrid img, .rightGrid img {
-        height: auto;
+    .leftGrid img {
+        min-height: auto;
+    }
+
+    /* About */
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
         margin: 0;
+        text-align: center;
     }
 
     .about h2 {
-        margin: 15px 0;
+        font-size: 1.4rem;
+        font-weight: 500;
     }
-} */
 
+    .about .about-desc {
+        display: flex;
+        flex-direction: row;
+        margin: 12px 0;
+    }
 
+    .about .about-desc #art-boy, .about .about-desc .about-p {
+        width: 50%;
+    }
 
+    .about .about-desc img {
+        margin: 0;
+        width: 60%;
+        max-height: auto;
+    }
+
+    .about .about-desc p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Input fields */
+    label {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    input[type=text], input[type=email], input[type=textarea] {
+        padding: 2px 8px;
+        max-width: 70%;
+        font-size: 1rem;
+    }
+
+    input[type=text]:focus, input[type=email]:focus, input[type=textarea]:focus {
+        caret-color: teal;
+        caret-shape: block;
+        outline: 1px solid blue;
+    }
+
+    #sendBtn {
+        width: 80%;
+        background-color: #222;
+        padding: 0.9rem;
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 0.9rem;
+    }
+
+    .footer img {
+        width: 50px;
+        height: auto;
+    }
+}
+
+/* Responsiveness for mobile size with a max-width of 460px */
+@media screen and (max-width: 460px) {
+    /* Header */
+    .header a {
+        font-size: 1.2rem;
+        padding: 10px 10px;      
+    }
+    
+    /* About */
+    .about .about-desc {
+        display: grid;
+        grid-template-rows: 1fr;
+        
+    }
+
+    .about .about-desc #art-boy, .about .about-desc .about-p {
+        width: 100%;
+    }
+
+    .about .about-desc img {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about .about-desc p {
+        font-size: 1rem;
+        text-align: left;
+        padding: 0 4px;
+    }
+
+    /* Footer */
+    .footer img {
+        width: 30px;
+        height: auto;
+    }
+}

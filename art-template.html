@@ -15,14 +15,14 @@
 
   <style></style>
 
-  <body>
+  <body onload="aler()">
     <div class="pageContent">
       <!-- Header -->
       <header>
         <div class="header">
           <h1>
             <a href="#my-art">MY ART</a>
-            <a href="#about" style="float: right;">About</a>
+            <a href="#about">About</a>
           </h1>
         </div>
       </header>
@@ -55,36 +55,40 @@
       <section>
         <div class="about">
           <h2 id="about">About</h2>
-          <div>
-            <img src="/Images/ART Boy.jpg" alt="Art Girl" style="width: 60%; height: auto;">
-          </div>
-          
-          <p>
-            Just me, myself and I, exploring the universe of unknownment. I have
-            a heart of love and an interest of lorem ipsum and mauris neque quam
-            blog. I want to share my world with you. Praesent tincidunt sed
-            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-            ultricies congue gravida diam non fringilla. Praesent tincidunt sed
-            tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-            ultricies congue gravida diam non fringilla.
-          </p>
+          <div class="about-desc">
+            <div id="art-boy">
+              <img src="/Images/ART Boy.jpg" alt="Art Boy">
+            </div>
             
-          <p class="coloured">Do no hesitate to contact me!</p>
+            <div class="about-p">
+              <p>
+                Just me, myself and I, exploring the universe of unknownment. I have
+                a heart of love and an interest of lorem ipsum and mauris neque quam
+                blog. I want to share my world with you. Praesent tincidunt sed
+                tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                ultricies congue gravida diam non fringilla. Praesent tincidunt sed
+                tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                ultricies congue gravida diam non fringilla.
+              </p>
+  
+              <p class="coloured">Do not hesitate to contact me!</p>
+            </div>
+          </div>         
   
           <form action="action.php" target="_blank">
             <div>
-              <label for="name">Name</label>
-              <input type="text" name="Text"/>
+              <label for="name">Name:</label>
+              <input type="text" name="Text" placeholder="DOE John"/>
             </div>
   
             <div>
-              <label for="email">Email</label>
-              <input type="email" name="Email"/>
+              <label for="email">Email:</label>
+              <input type="email" name="Email" placeholder="johndoe@****"/>
             </div>
   
             <div>
-              <label for="textarea"> Message</label>
-              <input type="textarea" name="Message"/>
+              <label for="textarea"> Message:</label>
+              <input type="textarea" name="Message" placeholder="Write your message here..."/>
             </div>
   
             <button type="button" id="sendBtn" onclick="sendFunction()">Send</button>          
@@ -98,13 +102,13 @@
       <!-- Footer -->
       <footer>
         <div class="footer">      
-          &copy; Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>
+          &copy; Powered by <a href="#" target="_blank">w3.css</a><br>
           <div title="Social Media links">
-            <a><img src="/Images/Facebook logo.png" alt="Facebook logo" style="width: 60px"/></a>
-            <a><img src="/Images/Instagram logo.jpg" alt="Instagram logo" style="width: 60px"/></a>
-            <a><img src="/Images/Pinterest logo.png" alt="Pinterest logo" style="width: 60px"/></a>
-            <a><img src="/Images/Twitter logo.png" alt="Twitter logo" style="width: 60px"/></a>
-            <a><img src="/Images/Linkedin logo.png"alt="Linkedin logo"style="width: 60px"/></a>
+            <a href="#"><img src="/Images/Facebook logo.png" alt="Facebook logo"/></a>
+            <a href="#"><img src="/Images/Instagram logo.jpg" alt="Instagram logo"/></a>
+            <a href="#"><img src="/Images/Pinterest logo.png" alt="Pinterest logo"/></a>
+            <a href="#"><img src="/Images/Twitter logo.png" alt="Twitter logo"/></a>
+            <a href="#"><img src="/Images/Linkedin logo.png"alt="Linkedin logo"/></a>
           </div>
           <br>
           <footer id="footerDate"></footer><br>
