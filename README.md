@@ -22,6 +22,7 @@ This website is a passion project aimed at providing a platform for artists to s
 
 ### Features that I think I should add in the future
 + I will add a blog section for sharing thoughts, inspiration, and creative processes.
++ A description section for every art work. Probably just a name or title and like a favorites icon in it.
 
 ## License
 [MIT License] 
