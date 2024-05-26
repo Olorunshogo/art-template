@@ -1,4 +1,4 @@
-# ARTIST COLLECTION
+![Artist gallery](https://github.com/Olorunshogo/art-template/assets/134854296/b0c30743-0905-4bd0-933e-5778b498560f)# ARTIST COLLECTION
 ## Description
 A sleek and modern website designed to showcase artistic talents . This repository contains the source code for the website, built with **HTML**, **CSS**, and **JavaScript**. 
 Link: https://artist-collection.netlify.app/
@@ -11,11 +11,16 @@ Link: https://artist-collection.netlify.app/
 5. Licesnse
 6. Contributing
 7. Artist Bio
+8. Contact
 
 
 ## Features
 + A portfolio section to display artwork and projects.
+  ![Artist gallery](https://github.com/Olorunshogo/art-template/assets/134854296/e3f7db06-927c-42b5-b89b-e5dcb19ae2b6)
+
 + A contact form for enquiries and commission requests.
+  ![Uploading Contact form.png…]()
+
 + Responsive design for a seamless experience across devices.
 
 This website is a passion project aimed at providing a platform for artists to share their art with the world. Fell free to explore, contribute, and get inspired.
@@ -36,8 +41,9 @@ Hi, I'm Aura, a designer, architect and a painter with a passion for creating un
 With a background in creative art, I've honed my skills in painting to bring my creative vision to life and I'm constantly exploring new ways to push boundaries and challenge myself.
 
 This collection on GitHub showcases a selection of my artistic works. I hope you enjoy exploring my art, and I welcome any feedback or collaborations!
+![About bio](https://github.com/Olorunshogo/art-template/assets/134854296/53956a9f-9459-4baf-a215-c0bb34624e8c)
 
-Contact
+## Contact
 
 - Email: [shownzy001@gmail.com]
 - Website: [https://artist-collection.netlify.app/]
