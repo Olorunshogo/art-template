@@ -1,0 +1,375 @@
+
+html {
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white-background: #eee;
+    --text-color: #000000;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--white-background);
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* SECTION */
+section {
+    margin-bottom: 60px;
+}
+
+.container {
+    display: block;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 20px 0;
+    font-weight: 500;      
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Photo Grid */
+.photoalbum {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.row {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.left-container {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.right-container {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.row1 img
+.row2 img {
+    max-width: 400px;
+    height: 200px;
+}
+
+/*
+.row1 img:hover,
+.row2 img:hover {
+    box-shadow: 0 4px 4px 4px rgba(45, 47, 48, 0.15);
+    transform: scale(1.01);
+} */
+
+/* About */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about .about-desc img {
+    width: 350px;
+    height: auto;
+}
+
+.about .about-desc {
+    margin-bottom: 15px;
+}
+
+.about .about-desc p {
+    font-size: 14px;
+    width: 100%;
+}
+
+.about form {
+    width: 100%;
+    transition: all 0.8 ease-in-out;
+    margin: 0 auto;
+}
+
+/* Input fields */
+label {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.about input[type=text], 
+.about input[type=email], 
+.about textarea#textarea {
+    padding: 12px 22px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 16px;
+    height: 45px;
+    font-size: 14px;
+    background-color: #ddd;
+}
+
+.about input[type=text]:focus, 
+.about input[type=email]:focus, 
+.about textarea:focus {
+    font-family: 'Raleway', sans-serif;
+    outline: 1px solid #ddd;
+}
+
+.about input[type=text]::placeholder, 
+.about input[type=email]::placeholder, 
+.about textarea::placeholder {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 8px;
+}
+
+.about textarea#textarea {
+    height: 80px;
+}
+
+#sendBtn {
+    width: 180px;
+    border: none;
+    border-radius: 12px;
+    color: #ddd;
+    background-color: #222;
+    padding: 16px;
+    font-size: 16px;
+}
+
+/* Coloured text */
+.coloured {
+    color: red;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+}
+
+footer .top {
+    width: 60px;
+    height: 45px;
+    padding: 15px 10px;
+    background-color: red;
+    position: fixed;
+    right: 7px;
+    bottom: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 12px;
+    z-index: 20;
+    display: none;
+}
+
+footer .top:hover {
+    background-color: #555;
+}
+
+
+
+@media screen and (max-width: 1800px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1110px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 650px;
+    }
+}
+
+/* Responsiveness for tablet size with a max-width of 760px */
+@media screen and (max-width: 760px) {
+    section {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        max-width: 550px;
+    }
+
+    /* Header */
+    .header a {
+        font-size: 24px;
+        padding: 12px 0;      
+    }
+
+    .photoalbum {
+        gap: 6px;
+    }
+
+    /* About */
+    .about h2 {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .about .about-desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about .about-desc img {
+        width: 50%;
+    }
+
+    .about .about-desc p {
+        font-size: 12px;
+    }
+
+    /* Input fields */
+    label {
+        font-size: 18px;
+    }
+
+    input[type=text], 
+    input[type=email], 
+    textarea#textarea {
+        padding: 2px 8px;
+        width: 70%;
+        font-size: 12px;
+        height: 40px;
+    }
+
+    #sendBtn {
+        width: 150px;
+        background-color: #222;
+        padding: 0.9rem;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 12px
+    }
+
+    .footer img {
+        width: 35px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 450px;
+    }
+}
+
+/* Responsiveness for mobile size with a max-width of 460px */
+@media screen and (max-width: 450px) {
+    /* Header */
+    .header a {
+        font-size: 20px;
+        padding: 10px 0;      
+    }
+
+    .photoalbum {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    /* About */
+    .about .about-desc {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;        
+    }
+
+    .about .about-desc #art-boy, .about .about-desc .about-p {
+        width: 100%;
+    }
+
+    .about .about-desc img {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about .about-desc .about-p .p {
+        font-size: 1rem;
+        text-align: left;
+        padding: 0 4px;
+    }
+
+    p .coloured {
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer img {
+        width: 30px;
+        height: auto;
+    }
+}
