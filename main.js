@@ -1,31 +1,13 @@
-// Smooth Scrolling
-// $('#about').on('click', function(event) {
-//     if (this.hash !== ''){
-//       event.preventDefault();
-  
-//       const hash = this.hash;
-//       $('html, body').animate(
-//         {
-//           scrollTop: $(hash).offset().top
-//         },
-//         800, // Speed in millisecond(s)
-//         function(){
-//           window.location.hash = hash;
-//         }
-//       );
-//     }
-// });
-
 {
   const date = new Date;
-  const day = date.getUTCDate();
-  const month = date.getMonth();
+  // const day = date.getUTCDate();
+  // const month = date.getMonth();
   const year = date.getUTCFullYear();
 
-  // let dateDisplayed = day + "/" + month + "/" + year;
+  document.getElementById('footerDate').style.fontSize = "12px";
+
   let dateDisplayed =  year;
   document.getElementById('footerDate').innerHTML = dateDisplayed;
-  document.getElementById('footerDate').style.fontSize = "14px";
 }
 
 {

@@ -34,7 +34,8 @@ section {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 1600px;
+    max-width: 1800px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -61,7 +62,6 @@ p {
 .photoalbum {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     gap: 10px;
     width: 100%;
     transition: all 0.4s ease-in-out;
@@ -88,12 +88,12 @@ p {
     margin-bottom: 10px;
 }
 
-/*
-.row1 img:hover,
-.row2 img:hover {
-    box-shadow: 0 4px 4px 4px rgba(45, 47, 48, 0.15);
-    transform: scale(1.01);
-} */
+
+.left-container img:hover,
+.right-container img:hover {
+    box-shadow: 0 3px 3px 3px rgba(45, 47, 48, 0.4);
+    transform: scale(1.02);
+}
 
 /* About */
 .about {
@@ -139,7 +139,7 @@ label {
 }
 
 .about input[type=text], 
-.about input[type=email], 
+.about input[type=email],
 .about textarea#textarea {
     padding: 12px 22px;
     outline: none;
@@ -154,14 +154,14 @@ label {
 
 .about input[type=text]:focus, 
 .about input[type=email]:focus, 
-.about textarea:focus {
+.about textarea#textarea:focus {
     font-family: 'Raleway', sans-serif;
-    outline: 1px solid #ddd;
+    outline: 1px solid grey;
 }
 
 .about input[type=text]::placeholder, 
 .about input[type=email]::placeholder, 
-.about textarea::placeholder {
+.about textarea#textarea::placeholder {
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
     padding-left: 8px;
@@ -169,6 +169,7 @@ label {
 
 .about textarea#textarea {
     height: 80px;
+    width: 80%;
 }
 
 #sendBtn {
@@ -187,15 +188,23 @@ label {
     text-align: center;
 }
 
-.footer {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
+footer {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.footer img {
-    width: 50px;
-    height: auto;
+.footer {
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+}
+
+.footer .brands i {
+    font-size: 45px;
+    color: var(--white-background);
 }
 
 footer .top {
@@ -219,38 +228,6 @@ footer .top:hover {
     background-color: #555;
 }
 
-
-
-@media screen and (max-width: 1800px) {
-    .container {
-        max-width: 1500px;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .container {
-        max-width: 1300px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .container {
-        max-width: 1110px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .container {
-        max-width: 900px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .container {
-        max-width: 650px;
-    }
-}
-
 /* Responsiveness for tablet size with a max-width of 760px */
 @media screen and (max-width: 760px) {
     section {
@@ -259,6 +236,7 @@ footer .top:hover {
 
     .container {
         max-width: 550px;
+        width: 90%;
     }
 
     /* Header */
@@ -269,6 +247,11 @@ footer .top:hover {
 
     .photoalbum {
         gap: 6px;
+    }
+
+    .left-container img,
+    .right-container img {
+        margin-bottom: 6px;
     }
 
     /* About */
@@ -299,7 +282,6 @@ footer .top:hover {
     input[type=email], 
     textarea#textarea {
         padding: 2px 8px;
-        width: 70%;
         font-size: 12px;
         height: 40px;
     }
@@ -324,14 +306,13 @@ footer .top:hover {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        max-width: 450px;
-    }
-}
-
 /* Responsiveness for mobile size with a max-width of 460px */
 @media screen and (max-width: 450px) {
+    .container {
+        max-width: 100%;
+        width: 90%;
+    }
+
     /* Header */
     .header a {
         font-size: 20px;
@@ -343,31 +324,22 @@ footer .top:hover {
         flex-direction: column;
         gap: 6px;
     }
+
+    .left-container,
+    .right-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     
     /* About */
     .about .about-desc {
         display: flex;
         flex-direction: column;
-        flex: 0 0 100%;        
-    }
-
-    .about .about-desc #art-boy, .about .about-desc .about-p {
-        width: 100%;
+        flex: 0 0 100%;      
     }
 
     .about .about-desc img {
-        margin: 0;
-        width: 100%;
-    }
-
-    .about .about-desc .about-p .p {
-        font-size: 1rem;
-        text-align: left;
-        padding: 0 4px;
-    }
-
-    p .coloured {
-        text-align: center;
+        width: 50%;
     }
 
     /* Footer */
